@@ -8,3 +8,5 @@ A simple but professional FPS controller for Godot engine.
 - Fps independent linear acceleration.
 - Fps independent friction using exponential decay.
 - Heavily documented code.
+
+Template icon created by [MRay](https://social.tchncs.de/@mray/).
