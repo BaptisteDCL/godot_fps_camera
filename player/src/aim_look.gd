@@ -43,14 +43,14 @@ extends CharacterBody3D
 @export_group("Movement")
 
 ## The jump speed along the [member up_direction].
-@export var jump_speed: float = 5
+@export var jump_speed: float = 3.5
 @export_subgroup("Acceleration")
 
 ## Ground acceleration.
-@export var ground_acceleration: float = 250
+@export var ground_acceleration: float = 200
 
 ## Air acceleration.
-@export var air_acceleration: float = 0
+@export var air_acceleration: float = 25
 @export_subgroup("Friction")
 
 ## Determines if the velocity along the [member up_direction] will be taken
@@ -61,7 +61,7 @@ extends CharacterBody3D
 @export_range(0, 50) var ground_friction: float = 25
 
 ## Decay factor for air friction.
-@export_range(0, 50) var air_friction: float = 0
+@export_range(0, 50) var air_friction: float = 2.8
 
 
 
@@ -181,7 +181,7 @@ func apply_gravity(delta: float):
 
 ## Makes the chacarter jump at the desired speed.
 func jump(speed: float):
-	velocity += up_direction * speed - velocity.project(up_direction)
+	velocity += up_direction * speed
 
 
 ## Aplies friction to the body using fps independent exponential decay.
